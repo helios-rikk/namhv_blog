@@ -1,0 +1,14 @@
+.App-container {
+    background-color: #E8E8E8;
+    text-align: left;
+    min-height: 500px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.App-blogs {
+  background-color: #ffffff;
+  text-align: left;
+  color: white;
+}
