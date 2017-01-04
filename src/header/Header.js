@@ -21,18 +21,18 @@ class Header extends Component {
           </div>
           <table className="App-header-social">
             <tr>
-              <a target="_blank" href={socialUrl.FACEBOOK}>
+              <a target="_blank" alt="My Facebook" href={socialUrl.FACEBOOK}>
                 <img src={facebook}/>
               </a>
-              <a target="_blank" href={socialUrl.TWITTER}>
+              <a target="_blank" alt="My Twitter" href={socialUrl.TWITTER}>
                 <img src={twitter}/>
               </a>
             </tr>
             <tr>
-              <a target="_blank" href={socialUrl.LINKED_IN}>
+              <a target="_blank" alt="My LinkedIn" href={socialUrl.LINKED_IN}>
                 <img src={linkedin}/>
               </a>
-              <a target="_blank" href={socialUrl.GITHUB}>
+              <a target="_blank" alt="My Github" href={socialUrl.GITHUB}>
                 <img src={github}/>
               </a>
             </tr>

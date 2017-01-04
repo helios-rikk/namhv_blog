@@ -3,6 +3,8 @@ import Firebase from 'firebase';
 import ReactListView from 'react-list-view';
 import './Container.css';
 
+const blogs = [];
+
 class Container extends Component {
 
   constructor(props) {
@@ -26,14 +28,12 @@ class Container extends Component {
       </div>
     );
   }
-
-
 }
 function loadData() {
     return Firebase.database().ref('/blogs/').once('value').then(function(snapshot) {
-    var blogs = snapshot.val().blogs;
-    // ...
-    console.log(username);
+    var newBlogs = snapshot.val();
+    blogs.push.apply(blogs, newBlogs);
+    console.log(blogs.length);
   });
 }
 
