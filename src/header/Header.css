@@ -23,15 +23,9 @@
     height: 100%;
     text-align: left;
     font-size: normal;
-    width: 80%;
+    width: 90%;
     display: inline-block;
     margin: 0 auto;
-}
-
-.App-header-social {
-    height: 100%;
-    width: 10%;
-    float: right;
 }
 
 @keyframes App-logo-spin {

@@ -1,40 +1,45 @@
 import React, { Component } from 'react';
 import Firebase from 'firebase';
-import ReactListView from 'react-list-view';
+import BlogItem from '../blog_item/BlogItem.js';
 import './Container.css';
-
-const blogs = [];
 
 class Container extends Component {
 
   constructor(props) {
     super(props);
-    loadData();
-    this.state = {};
+    this.state = {
+       blogs: []
+    }
+  }
+
+  componentDidMount() {
+    this.loadData();
+  }
+
+  loadData = () => {
+      Firebase.database().ref('/blogs/').once('value').then(snapshot => {
+        const newBlogs = snapshot.val();
+        this.setState({blogs : newBlogs})
+      });
+  }
+
+  createBlog = (blog) => {
+    return <BlogItem key={blog.id} blogInfo={blog}/>;
+  }
+
+  createBlogs = (blogs) => {
+    return blogs.map(this.createBlog);
   }
 
   render() {
     return (
       <div className="App-container">
-        <ReactListView  className="App-blogs"
-          rowCount={100}
-          rowHeight={10}
-          renderItem={(x, y, style) =>
-            <div style={style}>
-              Item #{x},#{y}
-            </div>
-          }
-        />
+        <div>
+          {this.createBlogs(this.state.blogs)}
+        </div>
       </div>
     );
   }
-}
-function loadData() {
-    return Firebase.database().ref('/blogs/').once('value').then(function(snapshot) {
-    var newBlogs = snapshot.val();
-    blogs.push.apply(blogs, newBlogs);
-    console.log(blogs.length);
-  });
 }
 
 export default Container;

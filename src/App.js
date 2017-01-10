@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Firebase from 'firebase';
 import Header from './header/Header.js'
+import Footer from './footer/Footer.js'
 import Container from './container/Container.js'
 import './App.css';
 
@@ -16,7 +17,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    Firebase.initializeApp(FirebaseConfig),
+    Firebase.initializeApp(FirebaseConfig);
     this.state = {};
   }
 
@@ -25,6 +26,7 @@ class App extends Component {
       <div>
         <Header/>
         <Container/>
+        <Footer/>
       </div>
     );
   }
