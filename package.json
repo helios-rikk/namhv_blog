@@ -11,7 +11,8 @@
     "muicss": "^0.9.7",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-list-view": "^1.0.0"
+    "react-list-view": "^1.0.0",
+    "react-markdown": "^2.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

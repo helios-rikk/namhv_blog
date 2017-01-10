@@ -1,0 +1,48 @@
+.Blog-detail-item-border {
+    text-decoration:none;
+}
+
+.Blog-detail-item {
+    text-decoration:none;
+    background-color: #f5f5f5;
+    color: white;
+    position: relative;
+    min-height: 500px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 20px;
+}
+
+.Blog-detail-description {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.Blog-detail-footer {
+    min-height: 46px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.Blog-detail-footer-author {
+    color: black;
+    float: left;
+    text-align: left;
+}
+
+.Blog-detail-footer-created_date {
+    float: right;
+    color: black;
+    text-align: left;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

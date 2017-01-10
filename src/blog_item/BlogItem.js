@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './BlogItem.css';
 
-class Header extends Component {
+class BlogItem extends Component {
   constructor(props) {
       super(props);
       this.state = {isToggleOn: true};
@@ -34,4 +34,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default BlogItem;

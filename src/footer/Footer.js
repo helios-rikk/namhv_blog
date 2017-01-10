@@ -6,7 +6,7 @@ import github from '../images/ic_header_github.png';
 import * as socialUrl from '../Constants.js'
 import './Footer.css';
 
-class Header extends Component {
+class Footer extends Component {
   render() {
     return (
       <div>
@@ -30,4 +30,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Footer;

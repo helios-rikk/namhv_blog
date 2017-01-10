@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Firebase from 'firebase';
-import Header from './header/Header.js'
-import Footer from './footer/Footer.js'
-import Container from './container/Container.js'
-import './App.css';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router'
+
+import Home from './page/Home.js'
+import Detail from './page/Detail.js'
 
 const FirebaseConfig = {
   apiKey: "AIzaSyDiortt9tpoEHQnBgGeJE4DjM8fXfNgO6k",
@@ -23,11 +23,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Header/>
-        <Container/>
-        <Footer/>
-      </div>
+      <Router history={browserHistory}>
+        <Route path="/" component={Home}/>
+        <Route path="/post/*" component={Detail}/>
+      </Router>
     );
   }
 }
